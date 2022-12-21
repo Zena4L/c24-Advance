@@ -6,3 +6,4 @@
 int addTwo(int x,int y);
 void getDateTime(void);
 double addDouble(double x,...);
+int addThree(int list[]);
