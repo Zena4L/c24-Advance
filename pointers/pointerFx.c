@@ -4,33 +4,34 @@
 /*
 *   description - Passing Pointers to Functions
 */
+/*This function returns nothing*/
 void Chprint(char *ch)
 {
-    printf("%s\n",ch);
+   printf("%s\n",ch);
 }
+/*Accepts list array and a number*/
 int DataAdd(int *list, int max)
 {
-    int i,sum=0;
-
-    for (i=0;i<max;i++)
+    int i,sum;
+    for(i=0;i<max;i++)
         sum += list[i];
     return sum;
 }
 
 int main(void){
-    char str[] = "it's a string";
+    char str[] = "it's a string!";
     char *ptr_str;
     int list[5]={1,2,3,4,5};
-    int *ptr_int;
+    int *ptr_list;
+
+    /*Assiging address to pointer*/
+    ptr_str = str;
+    printf("%s\n",ptr_str);
 
     /*Assigning address to pointer*/
-    ptr_str = str;
-    Chprint(ptr_str);
-    Chprint(str);
-
-    /*Assigining address to pointer*/
-    ptr_int = list;
-    printf("The result of DataAdd() is = %d\n",DataAdd(ptr_int,5));
-    printf("The result of DataAdd() is = %d\n",DataAdd(list,5));
+    ptr_list = list;
+    printf("The result returned by DataAd() = %d\n", DataAdd(list,5));
+    printf("The result returned by DataAd() = %d\n", DataAdd(ptr_list,5));
+   
     return 0;
 }
