@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 #include <stdio.h>
 
 /*
@@ -17,9 +17,9 @@ int addThree(int list[]){
 int main()
 {
     int sum, list[3];
-    printf(“Enter three integers separated by spaces:\n”);
-    scanf(“%d%d%d”, &list[0], &list[1], &list[2]);
+    printf("Enter three integers separated by spaces:\n");
+    scanf("%d%d%d", &list[0], &list[1], &list[2]);
     sum = addThree(list);
-    printf(“The sum of the three integers is: %d\n”, sum);
+    printf("The sum of the three integers is: %d\n", sum);
     return 0;
 }
